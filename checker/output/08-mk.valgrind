@@ -1,0 +1,112 @@
+==3207== Memcheck, a memory error detector
+==3207== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3207== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3207== Command: ./mk
+==3207== Parent PID: 2863
+==3207== 
+==3207== error calling PR_SET_PTRACER, vgdb might block
+==3207== 
+==3207== Process terminating with default action of signal 13 (SIGPIPE)
+==3207==    at 0x497AA37: write (write.c:26)
+==3207==    by 0x48F0F6C: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1180)
+==3207==    by 0x48F2A60: new_do_write (fileops.c:448)
+==3207==    by 0x48F2A60: _IO_new_do_write (fileops.c:425)
+==3207==    by 0x48F2A60: _IO_do_write@@GLIBC_2.2.5 (fileops.c:422)
+==3207==    by 0x48F1754: _IO_new_file_xsputn (fileops.c:1243)
+==3207==    by 0x48F1754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==3207==    by 0x48E6F9B: puts (ioputs.c:40)
+==3207==    by 0x10A01B: DFS_autocorrect (trie.c:337)
+==3207==    by 0x10A0B8: DFS_autocorrect (trie.c:353)
+==3207==    by 0x10A0B8: DFS_autocorrect (trie.c:353)
+==3207==    by 0x10A0B8: DFS_autocorrect (trie.c:353)
+==3207==    by 0x10A0B8: DFS_autocorrect (trie.c:353)
+==3207==    by 0x10A0B8: DFS_autocorrect (trie.c:353)
+==3207==    by 0x10A0B8: DFS_autocorrect (trie.c:353)
+==3207== 
+==3207== HEAP SUMMARY:
+==3207==     in use at exit: 11,867,928 bytes in 102,235 blocks
+==3207==   total heap usage: 103,251 allocs, 1,016 frees, 12,277,992 bytes allocated
+==3207== 
+==3207== 24 bytes in 1 blocks are still reachable in loss record 1 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x1095C9: trie_create_node (trie.c:15)
+==3207==    by 0x10973D: trie_create (trie.c:50)
+==3207==    by 0x1093B0: main (mk.c:17)
+==3207== 
+==3207== 32 bytes in 1 blocks are still reachable in loss record 2 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x1096E4: trie_create (trie.c:46)
+==3207==    by 0x1093B0: main (mk.c:17)
+==3207== 
+==3207== 208 bytes in 1 blocks are still reachable in loss record 3 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x109622: trie_create_node (trie.c:19)
+==3207==    by 0x10973D: trie_create (trie.c:50)
+==3207==    by 0x1093B0: main (mk.c:17)
+==3207== 
+==3207== 512 bytes in 1 blocks are still reachable in loss record 4 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x10934D: main (mk.c:12)
+==3207== 
+==3207== 512 bytes in 1 blocks are still reachable in loss record 5 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x10A10C: trie_autocorrect (trie.c:373)
+==3207==    by 0x109528: main (mk.c:46)
+==3207== 
+==3207== 4,096 bytes in 1 blocks are still reachable in loss record 6 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x48E4C23: _IO_file_doallocate (filedoalloc.c:101)
+==3207==    by 0x48F3D5F: _IO_doallocbuf (genops.c:347)
+==3207==    by 0x48F2D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+==3207==    by 0x48F3E15: _IO_default_uflow (genops.c:362)
+==3207==    by 0x48C914F: __vfscanf_internal (vfscanf-internal.c:628)
+==3207==    by 0x48C81C1: __isoc99_scanf (isoc99_scanf.c:30)
+==3207==    by 0x1093CF: main (mk.c:21)
+==3207== 
+==3207== 4,096 bytes in 1 blocks are still reachable in loss record 7 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x48E4C23: _IO_file_doallocate (filedoalloc.c:101)
+==3207==    by 0x48F3D5F: _IO_doallocbuf (genops.c:347)
+==3207==    by 0x48F2FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+==3207==    by 0x48F1754: _IO_new_file_xsputn (fileops.c:1243)
+==3207==    by 0x48F1754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==3207==    by 0x48E6F9B: puts (ioputs.c:40)
+==3207==    by 0x10A1EE: print_task_1 (trie.c:399)
+==3207==    by 0x10AACE: trie_autocomplete (trie.c:652)
+==3207==    by 0x109576: main (mk.c:53)
+==3207== 
+==3207== 368,496 bytes in 15,354 blocks are still reachable in loss record 8 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x1095C9: trie_create_node (trie.c:15)
+==3207==    by 0x10980E: trie_insert (trie.c:79)
+==3207==    by 0x109471: main (mk.c:27)
+==3207== 
+==3207== 858,240 bytes in 35,760 blocks are still reachable in loss record 9 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x1095C9: trie_create_node (trie.c:15)
+==3207==    by 0x10980E: trie_insert (trie.c:79)
+==3207==    by 0x109F1E: trie_load (trie.c:297)
+==3207==    by 0x1094A4: main (mk.c:33)
+==3207== 
+==3207== 3,193,632 bytes in 15,354 blocks are still reachable in loss record 10 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x109622: trie_create_node (trie.c:19)
+==3207==    by 0x10980E: trie_insert (trie.c:79)
+==3207==    by 0x109471: main (mk.c:27)
+==3207== 
+==3207== 7,438,080 bytes in 35,760 blocks are still reachable in loss record 11 of 11
+==3207==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3207==    by 0x109622: trie_create_node (trie.c:19)
+==3207==    by 0x10980E: trie_insert (trie.c:79)
+==3207==    by 0x109F1E: trie_load (trie.c:297)
+==3207==    by 0x1094A4: main (mk.c:33)
+==3207== 
+==3207== LEAK SUMMARY:
+==3207==    definitely lost: 0 bytes in 0 blocks
+==3207==    indirectly lost: 0 bytes in 0 blocks
+==3207==      possibly lost: 0 bytes in 0 blocks
+==3207==    still reachable: 11,867,928 bytes in 102,235 blocks
+==3207==         suppressed: 0 bytes in 0 blocks
+==3207== 
+==3207== For lists of detected and suppressed errors, rerun with: -s
+==3207== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

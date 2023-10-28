@@ -1,0 +1,23 @@
+LOAD data/dracula.txt
+AUTOCORRECT lhains 1
+REMOVE forgetting
+AUTOCORRECT yrospect 1
+AUTOCORRECT clap 2
+AUTOCORRECT thjught 1
+AUTOCORRECT drasping 1
+AUTOCORRECT welllehaved 1
+AUTOCORRECT bonporeal 2
+AUTOCORRECT skrasja 2
+AUTOCORRECT xlot 1
+AUTOCORRECT meak 1
+AUTOCORRECT iftrude 1
+AUTOCORRECT mgeres 2
+AUTOCORRECT en 1
+AUTOCORRECT beinw 2
+AUTOCORRECT svm 2
+AUTOCORRECT snstalled 1
+AUTOCORRECT yxowith 2
+AUTOCORRECT cugustanother 1
+AUTOCORRECT atfuned 1
+AUTOCORRECT vronkier 2
+EXIT

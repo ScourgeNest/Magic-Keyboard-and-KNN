@@ -1,0 +1,55 @@
+==3205== Memcheck, a memory error detector
+==3205== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3205== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3205== Command: ./mk
+==3205== Parent PID: 2863
+==3205== 
+==3205== error calling PR_SET_PTRACER, vgdb might block
+==3205== 
+==3205== Process terminating with default action of signal 13 (SIGPIPE)
+==3205==    at 0x497AA37: write (write.c:26)
+==3205==    by 0x48F0F6C: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1180)
+==3205==    by 0x48F2A60: new_do_write (fileops.c:448)
+==3205==    by 0x48F2A60: _IO_new_do_write (fileops.c:425)
+==3205==    by 0x48F2A60: _IO_do_write@@GLIBC_2.2.5 (fileops.c:422)
+==3205==    by 0x48F4A41: _IO_flush_all_lockp (genops.c:706)
+==3205==    by 0x48F4BFD: _IO_cleanup (genops.c:866)
+==3205==    by 0x48AB541: __run_exit_handlers (exit.c:134)
+==3205==    by 0x48AB60F: exit (exit.c:143)
+==3205==    by 0x488FD96: (below main) (libc_start_call_main.h:74)
+==3205== 
+==3205== HEAP SUMMARY:
+==3205==     in use at exit: 8,192 bytes in 2 blocks
+==3205==   total heap usage: 134,000 allocs, 133,998 frees, 15,832,224 bytes allocated
+==3205== 
+==3205== 4,096 bytes in 1 blocks are still reachable in loss record 1 of 2
+==3205==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3205==    by 0x48E4C23: _IO_file_doallocate (filedoalloc.c:101)
+==3205==    by 0x48F3D5F: _IO_doallocbuf (genops.c:347)
+==3205==    by 0x48F2D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+==3205==    by 0x48F3E15: _IO_default_uflow (genops.c:362)
+==3205==    by 0x48C914F: __vfscanf_internal (vfscanf-internal.c:628)
+==3205==    by 0x48C81C1: __isoc99_scanf (isoc99_scanf.c:30)
+==3205==    by 0x1093CF: main (mk.c:21)
+==3205== 
+==3205== 4,096 bytes in 1 blocks are still reachable in loss record 2 of 2
+==3205==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3205==    by 0x48E4C23: _IO_file_doallocate (filedoalloc.c:101)
+==3205==    by 0x48F3D5F: _IO_doallocbuf (genops.c:347)
+==3205==    by 0x48F2FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+==3205==    by 0x48F1754: _IO_new_file_xsputn (fileops.c:1243)
+==3205==    by 0x48F1754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==3205==    by 0x48E6F9B: puts (ioputs.c:40)
+==3205==    by 0x10A227: print_task_2 (trie.c:414)
+==3205==    by 0x10ABDE: trie_autocomplete (trie.c:681)
+==3205==    by 0x109576: main (mk.c:53)
+==3205== 
+==3205== LEAK SUMMARY:
+==3205==    definitely lost: 0 bytes in 0 blocks
+==3205==    indirectly lost: 0 bytes in 0 blocks
+==3205==      possibly lost: 0 bytes in 0 blocks
+==3205==    still reachable: 8,192 bytes in 2 blocks
+==3205==         suppressed: 0 bytes in 0 blocks
+==3205== 
+==3205== For lists of detected and suppressed errors, rerun with: -s
+==3205== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

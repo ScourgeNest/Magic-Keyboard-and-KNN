@@ -1,0 +1,16 @@
+==3203== Memcheck, a memory error detector
+==3203== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3203== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3203== Command: ./mk
+==3203== Parent PID: 2863
+==3203== 
+==3203== error calling PR_SET_PTRACER, vgdb might block
+==3203== 
+==3203== HEAP SUMMARY:
+==3203==     in use at exit: 0 bytes in 0 blocks
+==3203==   total heap usage: 4,816 allocs, 4,816 frees, 723,744 bytes allocated
+==3203== 
+==3203== All heap blocks were freed -- no leaks are possible
+==3203== 
+==3203== For lists of detected and suppressed errors, rerun with: -s
+==3203== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
